@@ -5,11 +5,11 @@ import {getRecipeService, filterDrinksSerrvice} from '../services/drink.service'
 const DrinksContext = createContext();
 
 const DrinksProvider = ({ children }) => {
-    const { drinks, setDrinks} = useState([]);
-    const { modal, setModal} = useState(false);
-    const { drinkId, setDrinkId} = useState(null);
-    const { recipe, setRecipe} = useState({});
-    const { loading, setLoading} = useState(false);
+    const [drinks, setDrinks] = useState([]);
+    const [modal, setModal] = useState(false);
+    const [drinkId, setDrinkId] = useState(null);
+    const [recipe, setRecipe] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     function handleModalClick () {
         setModal(!modal);
@@ -44,7 +44,7 @@ const DrinksProvider = ({ children }) => {
         }
     }
 
-    useEffect(( ) => {
+    useEffect(() => {
         getRecipe();
 
     }, [drinkId])

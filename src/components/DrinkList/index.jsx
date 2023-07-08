@@ -1,10 +1,10 @@
 import {Row} from 'react-bootstrap';
-import {useDrinks} from '../../hooks/useDrinks';
+import useDrinks from '../../hooks/useDrinks';
 import DrinkCard from '../DrinkCard';
 
 export default function DrinksList () {
 
-    const { drinks} = useDrinks();
+    const { drinks } = useDrinks();
 
     if (drinks.length === 0 ){
         return (

@@ -1,13 +1,13 @@
 import { Form, Row, Col, Alert } from 'react-bootstrap';
 import { Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import {useCategories} from '../../hooks/useCategories';
-import {useDrinks} from '../../hooks/useDrinks';
+import useCategories from '../../hooks/useCategories';
+import useDrinks from '../../hooks/useDrinks';
 
 export default function SearchForm() {
     const { categories } = useCategories();
 
-    const { getDink, loading } = useDrinks();
+    const { getDrink, loading } = useDrinks();
 
     const initialValues = {
         name: "",
@@ -20,7 +20,7 @@ export default function SearchForm() {
     })
 
     const handleSubmit = (values) => {
-        getDink(values)
+        getDrink(values)
     }
 
     return (
@@ -32,6 +32,7 @@ export default function SearchForm() {
 
             {
                 (formik) => (
+                    
                     <Form onSubmit={formik.handleSubmit}>
                         {
                             formik.status && (
@@ -63,11 +64,11 @@ export default function SearchForm() {
                                     <Form.Label htmlFor='category'>Categoria Bebida</Form.Label>
                                     <Field
                                         id="category"
+                                        placeholder="- Seleccionar categoria -"
                                         name="category"
-                                        as={Form.Control}
-                                        placeholder="Ej: trequila, vodka, etc."
+                                        as={Form.Select}
                                     >
-                                        <option desabled >-Seleccionar categoria -</option>
+                                        <option >- Seleccionar categoria -</option>
                                         {
                                             categories.map((category) => (
                                                 <option

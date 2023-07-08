@@ -7,9 +7,11 @@ function App() {
   return (
     
     <MainLayout>
+      <DrinksProvider>
       <CategoriesProvider>
         <AppRoutes />
       </CategoriesProvider>
+      </DrinksProvider>
     </MainLayout >
 
   )

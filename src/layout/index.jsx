@@ -9,7 +9,9 @@ export default function MainLayout ({children}){
         <div className={styles.main} >
 
             <Header/>
-            <Container className='mt-5'>{children}</Container>
+            <Container className='mt-5'>
+                {children}
+            </Container>
             <Footer />
             
         </div>

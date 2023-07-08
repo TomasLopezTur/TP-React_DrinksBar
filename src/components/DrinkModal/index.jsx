@@ -1,9 +1,9 @@
 import { Modal, Image } from 'react-bootstrap';
-import {useDrinks} from '../../hooks/useDrinks';
+import useDrinks from '../../hooks/useDrinks';
 
 export default function DrinkDetailModal() {
 
-    const { Modal, handleModalClick, recipe, loading } = useDrinks();
+    const { modal, handleModalClick, recipe, loading } = useDrinks();
 
     function showIngredients() {
         let ingredients = [];

@@ -2,9 +2,9 @@ import { useState, useEffect, createContext } from 'react';
 import PropTypes from 'prop-types';
 import {getCategoriesService} from '../services/categories.service';
 
-export const CategoriesContext = createContext();
+const CategoriesContext = createContext();
 
-export const CategoriesProvider = ({children}) => {
+const CategoriesProvider = ({children}) => {
     const [categories, setCategories] = useState([]);
     
     const getCategories = async () => {
@@ -34,5 +34,5 @@ CategoriesProvider.propTypes ={
     children: PropTypes.node.isRequired,
 };
 
-/* export default  {CategoriesProvider , CategoriesContext}; */
+export {CategoriesProvider , CategoriesContext};
 /* export default CategoriesContext; */

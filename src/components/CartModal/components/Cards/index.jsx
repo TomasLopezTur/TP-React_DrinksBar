@@ -27,5 +27,5 @@ const { removeOneFromCart, removeAllFromCart, addToCart} = useCart();
 }
 
 ModalCard.propTypes = {
-    drink: PropTypes.node.isRequired,
+    drink: PropTypes.object.isRequired,
 }

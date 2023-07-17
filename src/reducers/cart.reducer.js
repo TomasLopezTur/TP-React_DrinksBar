@@ -6,7 +6,7 @@ export const CartInitialState = {
 
 }
 
-export function cartReducer(state, { payload, type }) {
+export function cartReducer(state, { type, payload = {} }) {
     const { idDrink } = payload;
 
     let drinkInCart = state.cartItems.find((item) => item.idDrink === idDrink);
@@ -61,7 +61,7 @@ export function cartReducer(state, { payload, type }) {
                 }
 
             } else {
-                let cartItemsUpdated = state.cartItems.filter(item => !item.idDrink === idDrink)
+                let cartItemsUpdated = state.cartItems.filter(item => item.idDrink !== idDrink)
                 return {
                     ...state,
                     cartItems: cartItemsUpdated
@@ -71,10 +71,10 @@ export function cartReducer(state, { payload, type }) {
         case actionTypes.REMOVE_ALL_FROM_CART:
             if(drinkInCart){
 
-                let cartItemsUpdated = state.cartItems.filter(item => !item.idDrink === idDrink)
+                let cartItemsUpdated = state.cartItems.filter(item => item.idDrink !== idDrink)
                 return {
                     ...state,
-                    cartItems: cartItemsUpdated
+                    cartItems: cartItemsUpdated,
                 }
             }
             return state;

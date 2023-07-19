@@ -67,7 +67,7 @@
     color: tomato;
     cursor: pointer;
 }
-.btnContainer{
+/* .btnContainer{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -92,4 +92,4 @@
 .btnContainer button.confirmOrder {
     background-color: lightskyblue;
     color: grey;
-}
+} */

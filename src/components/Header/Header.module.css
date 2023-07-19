@@ -1,9 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;500;700;800&display=swap');
+
 .header {
-    background-color: #ec3a49;
-    color: white;
+    background-image: url(../../../public/Image/drink_headerIV.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: 80% 20%;
+    background-attachment: scroll;
+    background-size: cover;
+    object-fit: cover;
+    position: sticky;
+    /* background-color: #ec3a49; */
+    
     text-align: center;
+    font-family: 'Inconsolata', monospace, "Outfit", sans-serif;
 }
 .header h1 {
-    font-family: "Outfit", sans-serif;
-    font-weight: 900;
+    color: rgba(0, 0, 0, 0.761);
+    font-size: 4rem;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+.header h5{
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.761);
+    text-shadow: 0 0 8px rgba(255, 255, 255, .8);
+}
+
+.headerConter{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.headerConter p {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color:rgba(28, 26, 26, 0.9);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    transition: all 2s ease-in-out;
+}
+.headerConter p:hover{
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
+.headerConter button {
+    margin: 0 4rem 0 2rem;
+    padding: 0 1rem 0 1rem;
+    font-weight: 800;
+    border: none;
+    background-color: rgba(207, 33, 33, 0.5);
+    border-radius: 8px;
+    transition: all 1s ease;
+}
+.headerConter button:hover{
+    
+    box-shadow: 0 0 18px rgba(207, 33, 33, 0.5);
+}
+.headerConter .icon {
+    margin-left: 2rem;
+    cursor: pointer;
+    color: rgba(207, 33, 33, 0.5);
+    font-size: 1.5rem;
+    transition: all 1s ease-in-out;
+} 
+.headerConter .icon:hover{
+    font-size: 1.6rem;
+    color: rgba(207, 33, 33, 1);
 }

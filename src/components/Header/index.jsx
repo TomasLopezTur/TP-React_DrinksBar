@@ -8,14 +8,17 @@ export default function Header (){
     const { toogleModal} = useModal();
     const { currentUser, logOut} = useAuth();
     return(
-        <header className={`py-5 ${styles.header}`}>
-                <h1>Buscador de Bebidas</h1>
+        <header className={`py-3 ${styles.header}`}>
+                <h1>Drinks-B@r</h1>
+                <h5>Buscador de Bebidas</h5>
                 {
                     currentUser &&(
                         <>
-                            <p>{currentUser.name}</p>
-                            <FontAwesomeIcon icon={faCartShopping} onClick={toogleModal} />
-                            <button onClick={logOut}>Cerrar sesion </button>
+                            <div className={styles.headerConter}>
+                                <p className='mt-3'>{currentUser.name}</p>
+                                <FontAwesomeIcon className={styles.icon} icon={faCartShopping} onClick={toogleModal} />
+                                <button onClick={logOut}>Salir</button>
+                            </div>
                         </>
                     )
                 }

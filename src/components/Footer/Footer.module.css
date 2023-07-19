@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;500;700;800&display=swap');
+
 .footer {
-    background-color: #ec3a49;
+    margin-top: 6rem;
+    background-color: #0d0d0de7;
     color: white;
     text-align: center;
+    font-family: 'Inconsolata', monospace, "Outfit", sans-serif;
+    text-decoration: underline;
+    
 }
 .footer small {
     font-family: "Outfit", sans-serif;

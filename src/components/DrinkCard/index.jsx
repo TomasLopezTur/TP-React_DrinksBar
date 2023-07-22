@@ -24,13 +24,13 @@ export default function DrinkCard({ drink }) {
 
                 <Card.Body>
                     <Card.Title>{drink.strDrink}</Card.Title>
-                    <Card.Subtitle style={{ marginBottom: 2 }} >{drink.price}</Card.Subtitle>
-                    <Row className='d-flex'>
+                    <Card.Subtitle style={{ marginBottom: 2, paddingTop: 20 }} >$ {drink.price}</Card.Subtitle>
+                    <Row className='d-flex justify-content-center align-items-center'>
 
                         <Col className='w-40 p-1 mt-2'>
 
                             <Button
-                                variant='warning'
+                                variant='primary'
                                 className=' text-uppercase'
                                 onClick={() => {
                                     handleModalClick();
@@ -45,7 +45,7 @@ export default function DrinkCard({ drink }) {
                         <Col className='w-40 p-2 mt-2'>
 
                             <Button
-                                variant='primary'
+                                variant='danger'
                                 className=' text-uppercase'
                                 onClick={() => handleAddToCart(drink) }
                             >

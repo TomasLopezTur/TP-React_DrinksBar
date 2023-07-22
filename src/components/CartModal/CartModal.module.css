@@ -12,20 +12,29 @@
 
 .modalBg .modal{
     background-color: white;
-    width: 500px;
+    width: 550px;
     border-radius: 8px;
     padding: 1rem;
+}
+.modalBg .modal h2{
+    padding: 0.5rem;
+    border-bottom: thin solid grey;
 }
 .iconClose {
     color:tomato;
     font-size: 1.5rem;
     cursor: pointer;
     float: right;
-
+    transition: all .5s ease;
+}
+.iconClose:hover{
+    filter: drop-shadow(0px 0px 10px tomato)
 }
 .modalBody {
     display: grid;
     grid-template-columns: 75% 25%;
+    justify-content: center;
+    align-items: center;
 }
 
 /* .card {
@@ -67,6 +76,14 @@
     color: tomato;
     cursor: pointer;
 } */
+aside{
+    margin-left: 1rem;
+}
+aside p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .btnContainer{
     display: flex;
     flex-direction: column;
@@ -86,10 +103,21 @@
 }
 
 .btnContainer button.clearCart {
-    background-color: lightskyblue;
-    color: gray;
+    margin-bottom: 1.5rem;
+    background-color: tomato;
+    color: black;
+    font-weight: 600;
+    transition: all .5s ease;
+}
+.btnContainer button.clearCart:hover{
+    box-shadow: 0 0 15px tomato;
 }
 .btnContainer button.confirmOrder {
-    background-color: lightskyblue;
-    color: grey;
+    background-color: #0d6efd;
+    color: white;
+    font-weight: 600;
+    transition: all .5s ease;
+}
+.btnContainer button.confirmOrder:hover{
+    box-shadow: 0 0 15px #0d6efd;
 }

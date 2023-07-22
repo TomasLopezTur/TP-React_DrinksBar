@@ -31,7 +31,7 @@ export default function CartModal (){
                     </div>
                     <aside>
                         {/* <p>Subtotal: xxxxxxxxx</p> */}
-                        <p>Total: {orderTotal}</p>
+                        <p>Total: ${orderTotal}</p>
                         <div className={styles.btnContainer}>
                             <button className={styles.clearCart} onClick={clearCart}>Vaciar carrito</button>
                             <button className={styles.confirmOrder} onClick={sendOrder}>Confirmar compra</button>

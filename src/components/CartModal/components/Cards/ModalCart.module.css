@@ -33,7 +33,7 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 0.5rem;
-    border-bottom: thin solid grey;
+    border-right: thin solid grey;
 
 }
 .card img {
@@ -64,8 +64,19 @@
     color: white;
 }
 .iconTrash{
+    margin: 0 5px 0 15px;
     color: tomato;
     cursor: pointer;
+    transition: all .5s ease;
+}
+.iconTrash:hover{
+    filter: drop-shadow(0px 0px 8px tomato)
+}
+span.nameDrinks{
+    width: 145px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 /* .btnContainer{
     display: flex;

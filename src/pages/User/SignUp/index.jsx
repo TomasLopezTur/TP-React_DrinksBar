@@ -36,7 +36,7 @@ export default function SignUp() {
                         alignItems: 'center',
                     }}
                 >
-                    <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+                    <Avatar sx={{ m: 1, bgcolor: 'error.main'  }}>
                         <LockOutlinedIcon />
                     </Avatar>
                     <Typography component="h1" variant="h5">
@@ -56,7 +56,7 @@ export default function SignUp() {
 
                             if (!values.email) {
 
-                                errors.email = 'Email requerido.';
+                                errors.email = 'El email es requerido.';
 
                             } else if (!regexpEmail.test(values.email)) {
 
@@ -65,7 +65,7 @@ export default function SignUp() {
                             }
 
                             if (!values.name) {
-                                errors.name = 'Nombre requerido.';
+                                errors.name = 'El nombre es requerido.';
 
                             }
                             if (!values.password) {
@@ -161,15 +161,16 @@ export default function SignUp() {
                                     <Button
                                         type="submit"
                                         fullWidth
-                                        variant="contained"
-                                        sx={{ mt: 3, mb: 2 }}
+                                        variant="outlined"
+                                        color="secondary"
+                                        sx={{ mt: 3, mb: 2,  paddingTop: 2, paddingBottom: 2, boxShadow: '0 0px 5px 2px rgba(255, 0, 0, .8)',border: 0  }}
                                     >
                                         Registrarme
                                     </Button>
-                                    <Grid container justifyContent="flex-end">
+                                    <Grid container justifyContent="flex-start"sx={{ mt: 2 }}>
                                         <Grid item>
                                             <Link to="/login" variant="body2">
-                                                Already have an account? Sign in
+                                                Usted tiene una cuenta?, Ingrese!!
                                             </Link>
                                         </Grid>
                                     </Grid>
@@ -178,7 +179,7 @@ export default function SignUp() {
                         }
                     </Formik>
                 </Box>
-                <Copyright sx={{ mt: 5 }} />
+                <Copyright sx={{ mt: 8 }} />
             </Container>
         </ThemeProvider>
     );

@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import WineBarIcon from '@mui/icons-material/WineBar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -35,11 +35,11 @@ export default function SignIn() {
                         alignItems: 'center',
                     }}
                 >
-                    <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-                        <LockOutlinedIcon />
+                    <Avatar sx={{ m: 1, bgcolor: 'primary.main' }}>
+                        <WineBarIcon />
                     </Avatar>
                     <Typography component="h1" variant="h5">
-                        Ingresá
+                        Inicia sesión
                     </Typography>
                     <Formik
 
@@ -53,7 +53,7 @@ export default function SignIn() {
 
                             if (!values.email) {
 
-                                errors.email = 'Email requerido.';
+                                errors.email = 'Email es requerido.';
 
                             } else if (!regexpEmail.test(values.email)) {
 
@@ -62,7 +62,7 @@ export default function SignIn() {
                             }
 
                             if (!values.password) {
-                                errors.password = 'Nombre requerido.';
+                                errors.password = 'El password es requerido.';
 
                             }
 
@@ -120,8 +120,9 @@ export default function SignIn() {
                                     <Button
                                         type="submit"
                                         fullWidth
-                                        variant="contained"
-                                        sx={{ mt: 3, mb: 2 }}
+                                        variant="outlined"
+                                        color="primary"
+                                        sx={{ mt: 3, mb: 2,  paddingTop: 2, paddingBottom: 2, boxShadow: '0 0px 5px 2px rgba(0, 0, 255, .5)',border: 0  }}
                                     >
                                         Iniciar
                                     </Button>
@@ -133,7 +134,7 @@ export default function SignIn() {
                                         </Grid> */}
                                         <Grid item>
                                             <Link to="/register" variant="body2">
-                                                {"Don't have an account? Sign Up"}
+                                                {"No tenes una cuenta?, registrate!!"}
                                             </Link>
                                         </Grid>
                                     </Grid>
